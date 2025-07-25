@@ -1,34 +1,55 @@
-# Mod10strategie
+# MOD10 Matches Analyzer
 
-# Mod10 Match Analyzer
+Ity dia application web tsotra natao ho an'ny fanadihadiana pattern mod10 amin'ny cotes Over/Under amin'ny matchs amin'ny alalan'ny capture d'écran.
 
-Application simple pour détecter des patterns de cotes sur des matchs sportifs par analyse numérique (modulo 10).
+## 🎯 Tanjona
 
-## Fonctionnalités
+- Mandray sary capture d'écran misy cotes sy anaran'ny équipe.
+- Manao **OCR** (Optical Character Recognition) amin'ny sary ho fakana automatique ireo cotes Over/Under sy anaran'ny équipe.
+- Manisa **modulo 10** amin'ny décimale-n'ny cote tsirairay.
+- Manamarina raha misy matchs hafa mitovy na manakaiky (±1) mod10 amin'ny base de données.
+- Mampiseho ny matchs mitovy pattern na manakaiky amin'ny UI.
 
-- Téléversement d’une capture d’écran de cotes
-- Lecture automatique (OCR) des cotes Over/Under
-- Calcul du mod10 sur les décimales
-- Recherche des matchs avec patterns similaires (identique ou proche)
-- Interface utilisateur simple
+## 📸 Fampiasana
 
-## Démarrage rapide
+1. **Upload**-o ny capture d'écran misy cotes sy anaran'ny équipe (azo atao maro).
+2. Tsindrio ny bouton **Analyze**.
+3. Hiseho ny valin'ny OCR sy ny mod10 calcul ho an'ny Over/Under.
+4. Raha misy pattern mitovy na manakaiky amin'ny base de données dia hiseho lisitra ireo matchs mitovy.
 
-1. Clonez le repo
-2. Installez les dépendances backend (`cd backend && pip install -r requirements.txt`)
-3. Installez les dépendances frontend (`cd frontend && npm install`)
-4. Lancez le backend (`python main.py`)
-5. Lancez le frontend (`npm start`)
+## 💡 Ohatra Calcul
 
-## Stack technique
+- **Match 1 :** Over 1.17 → Décimale = 17 → mod10 = 7
+- **Match 2 :** Under 2.33 → Décimale = 33 → mod10 = 3
+- **Pattern total :** 73
 
-- Backend : Python (Flask), pytesseract, SQLite
-- Frontend : ReactJS
+## 🖥️ Interface
 
-## Usage
+- Sary capture no ampidirina, tsy ilaina saisie anaran'ny équipe na cotes.
+- UI simple : bouton upload sy analyze, valiny hiseho etsy ambany.
+- Valiny : lisitry ny matchs sy pattern mod10 mitovy/akaiky.
 
-- Saisissez les noms de matchs ou téléversez une capture
-- Cliquez sur “Analyser”
-- Consultez la table des résultats
+## 🔗 Deployment amin'ny GitHub Pages
+
+1. Mamorona repository amin'ny GitHub (ohatra : `mod10-matches`).
+2. Apetraho ao ny rakitra : `index.html`, `main.js`, `style.css`, ary `README.md`.
+3. Mandehana amin'ny **Settings → Pages**.
+4. Safidio ny branch ("main") sy folder ("root").
+5. Jereo amin'ny URL : `https://username.github.io/mod10-matches/`
+
+## ⚡ Fanamarihana
+
+- Raha static site (HTML/CSS/JS), azo deploy-na mivantana amin'ny GitHub Pages.
+- Raha mila backend Python na OCR server-side, dia mila service externe (Render, Vercel, HuggingFace Spaces, ...).
+- Azonao ampiasaina **Tesseract.js** amin'ny navigateur ho an'ny OCR.
 
 ---
+
+## 📚 Resources
+
+- [GitHub Pages Guide](https://pages.github.com/)
+- [Tesseract.js OCR](https://tesseract.projectnaptha.com/)
+
+---
+
+**Natao ho an'ny fanadihadiana pattern mod10 amin'ny cotes Over/Under. Tsy manome prédiction, fa identification de tendance fotsiny.**
